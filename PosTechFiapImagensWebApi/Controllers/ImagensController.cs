@@ -73,7 +73,7 @@ namespace PosTechFiapImagensWebApi.Controllers
 
         [HttpPost]
         [Route("upload")]
-        [SwaggerOperation(Summary = "Endpoint para upload da imagem no Storage.", Description = "Endpoint para upload da imagem no Storage.")]
+        [SwaggerOperation(Summary = "Endpoint para realizar upload da imagem no Storage.", Description = "Endpoint para realizar upload da imagem no Storage.")]
         public async Task<IActionResult> UploadImagemAsync([FromBody] ImageRequestViewModel model)
         {
             ImagemResponseViewModel imagem = await _service.UploadImagemAsync(new BinaryData(model.DadosBytes), model.Nome);
